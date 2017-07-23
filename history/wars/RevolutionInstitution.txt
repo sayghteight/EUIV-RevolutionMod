@@ -1,0 +1,13 @@
+name = "I World war"
+war_goal = {
+	type = take_border
+	casus_belli = cb_border_war
+	province = 548 # West Berar
+}
+
+1914.7.28 {
+	add_attacker = GBR # Great britain
+	add_attacker = FRA # France
+	add_defender = TUR # Empire Otoman
+	add_defender = BUL # Bulgaria
+} # Need add more countries
