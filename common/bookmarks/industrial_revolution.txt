@@ -1,0 +1,10 @@
+bookmark =
+{
+	name = "INDUSTRIAL_REVOLUTION_NAME"
+	desc = "INDUSTRIAL_REVOLUTION_DESC"
+	date = 1800.1.1
+	
+	country = FRA
+	country = GBR
+	country = SPA
+}

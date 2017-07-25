@@ -1897,7 +1897,7 @@ enlightenment = {
 			neighbors_tech_discount = 0.4
 		}
 	}
-
+}
 
 #######################################
 # Revolution
@@ -1907,20 +1907,93 @@ revolution = {
 	penalty = 0.5
 
 	bonus = {
-		culture_conversion_cost = -0.25
+		development_cost = -4
 		global_trade = 10
+		
 	}
 
 	historical_start_date = 1800.1.1
 	historical_start_province = 236 #London
 
+	
+	history = {
+		OR = {
+			AND = {
+				is_year = 1800
+				continent = europe
+				owner = { technology_group = western }
+			}
+			
+			AND = {
+				is_year = 1810
+				continent = europe
+			}	
+
+			AND = {
+				is_year = 1820
+				superregion = near_east_superregion
+			}
+			AND = {
+				is_year = 1840
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = south_america_superregion
+			}
+			AND = {
+				is_year = 1840
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = north_america_superregion
+			}
+			AND = {
+				is_year = 1840
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = central_america_superregion
+			}
+		}
+	}
+	
 	can_start = {
 		is_year = 1800
-		has_institution = enlightenment
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_seat_in_parliament
+				has_seat_in_parliament = yes
+			}
+			has_building = university
+			AND = {
+				continent = europe
+				development = 20
+			}
+			
+		}
 	}
-
+	
 	start_chance = 10		#in 100 for when a province can_start
-
+	
+	
+	on_start = institution_events.8
+	
+	
+	can_embrace = {
+		always = yes
+	}
 
 
 }

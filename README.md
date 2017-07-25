@@ -18,3 +18,10 @@ Falta por agregar un monton de cosas:
   
 
 ### Installation
+
+
+### Localización distribución de archivos
+
+Spanish :
+
+text_l_spanish: Últimas lineas son las del mod.
