@@ -1908,7 +1908,7 @@ revolution = {
 
 	bonus = {
 		development_cost = -4
-		global_trade = 10
+		global_trade = 2
 		
 	}
 
